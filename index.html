@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>수궁가</title>
+	<style type="text/css">
+
+		@font-face { font-family: 'SDKukdetopokki'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDKukdetopokki.woff') format('woff'); font-weight: normal; font-style: normal; }
+		@font-face { font-family: 'GyeonggiBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+		
+
+		ul{list-style-type: none;}
+		li{float: left;}
+		li a{text-decoration: none; color: #071748; font-weight: bold; display: block; text-align:center; padding: 5px 35px; }
+		li a:link, li a:hover; li a:active;, li a:visited{display:block; text-decoration: none; color: #071748; font-weight: bold; transition: all 1s;}
+		li a:hover{background: #071748; color: white;text-decoration: none;}
+		
+		.nav{position: fixed; left: calc(50% + 0px); z-index: 999; font-family: 'SDKukdetopokki'; opacity: 70%;}
+		
+		section, .wrap{position: relative;}
+		.wrap{height: 700px;}
+		
+		h1{position: absolute; top: 20px; left: calc(50% - 270px); 
+			font-size: 205px; font-family: 'SDKukdetopokki'; color: #071748; -webkit-text-stroke: 1px white;}
+		h3{position: absolute; font-family: 'SDKukdetopokki'; font-size: 35px;}	
+		p{font-family: 'GyeonggiBatang'; font-size: 20px; position: absolute; word-break: keep-all;width: 450px; line-height: 1.9em;  font-weight: bolder; color: #071748;}
+		iframe, img{position: absolute;}
+		footer p{position: absolute; font-family: 'GyeonggiBatang'; font-weight: bold; color: #002d4c; height: 100px; text-align: center; left: calc(50% - 200px); font-size: 12px; z-index: 999;}
+		
+
+		
+
+		.a .wrap{height: 600px; background-image: url(wave2.png);}
+
+
+		.b .wrap{ height: 600px; }
+		.b .wrap p{position: absolute; width: 450px; word-break: keep-all; line-height: 1.8em; font-size: 18px; color: #071748; top: 200px; opacity: 0;}
+		.b .wrap .p1{  left: calc(50% - 450px); color: #071748;}
+		.b .wrap .p2{left: calc(50% + 50px);  color: #071748;}
+		@keyframes ani{from{opacity: 0;} to{opacity: 1;}}
+
+		.c .wrap{height: 900px;}
+		.c .wrap h3{left: calc(50% - 450px); font-size: 35px; color: #071748; opacity: 0; top: 0px;}
+		.c .wrap p{top: 150px; left: calc(50% - 400px); width: 500px; line-height: 1.8em;  color: #071748; opacity: 0;  font-weight: bolder;}
+		.c .wrap .cimg{right: 70px; width: 600px; }
+		.cv1{top: 550px; left:  calc(50% - 670px); z-index: 998;}
+		.cv2{top: 550px; left: calc(50% - 200px); z-index: 998;}
+		.cv3{top: 550px; left: calc(50% + 270px); z-index: 998;}
+		@keyframes ani2{from{opacity: 0; top: 50px;} to{opacity: 1;}}
+
+		.cv1:hover, .cv1:active {opacity: 0.7; }
+		.cv2:hover, .cv2:active {opacity: 0.7;}
+		.cv3:hover, .cv3:active {opacity: 0.7; }
+
+
+		.d .wrap{background: url(./tiger.png); background-size: cover; background-attachment: fixed; height: 1100px;}
+		.d .wrap h3{ top:250px; left: calc(50% - 450px); color: #071748; opacity: 0;}
+		.d .wrap p {top: 350px; left: calc(50% - 450px); color: #071748; opacity: 0;}
+		.dv1{top: 550px; left: calc(50% + 50px); z-index: 999;}
+		.dv2{top: 550px; left: calc(50% - 450px); z-index: 999;}
+		.dv1:hover, .cv1:active {opacity: 0.7; }
+		.dv2:hover, .cv2:active {opacity: 0.7; l}
+
+
+		.e .wrap{height: 1100px;}
+		.e .wrap h3{top: 150px; left: calc(50% + 50px); color: #071748; z-index: 999; opacity: 0;}
+		.e .wrap p{top: 200px; left: calc(50% + 100px); top: 250px; color: #071748; z-index: 999; opacity: 0;}
+		.e .eimg{top: -100px; height: 1400px;}
+		.ev1{top: 500px; left: calc(50% + 50px); z-index: 998;}
+		.ev2{top: 800px; left: calc(50% - 350px);z-index: 998;}
+		.ev3{top: 800px; left: calc(50% + 50px);z-index: 998;}
+		.ev4{top: 500px; left: calc(50% - 350px);z-index: 998;}
+		.ev1:hover{opacity: 0.5; }
+		.ev2:hover{opacity: 0.5; }
+		.ev3:hover{opacity: 0.5; }
+		.ev4:hover{opacity: 0.5; }
+		.e .wrap .eimg{position: fixed;  height: 800px; opacity: 0; z-index: 1;}
+		@keyframes rab1{from{opacity: 0;} to{opacity: 1;}}
+
+		
+		.f .wrap{height: 900px;}
+		.f .wrap h3{ top: 200px; right: calc(50% - 450px); color: #071748; z-index: 999; opacity: 0;}
+		.f .wrap p{right: calc(50% - 550px); top: 300px; z-index:999; opacity: 0; }
+		.fv1{top: 530px; left: calc(50% - 550px); z-index: 999;}
+		.fv2{top: 200px; left: calc(50% - 550px); z-index: 999;}
+		.f .wrap .fimg{ position: fixed; right: 50px; width: 400px; top: 300px; opacity: 0; }
+		@keyframes tur{from{transform: rotate(-20deg); right: 600px; opacity: 0;}
+		to{transform: rotate(30deg); right: 50px; opacity: 0.7;}}
+	
+		@keyframes bpa{from{opacity: 0; top: 300px;} to{opacity: 1; top: 150px;}}
+
+		
+		
+
+		
+
+
+
+	</style>
+</head>
+<body>
+	<div id="monitor"></div>
+	
+		
+
+	<section class="nav">
+		<nav>
+			<ul>
+			<li><a href="https://hk-jiheekim.github.io/1219_0/">메인</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_1/">수궁가</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_2/">사랑가</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_3/">난봉가</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_4/">태평가</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_5/">수심가</a></li>
+
+			</ul>
+		</nav>
+	</section>
+
+	<section class="a">
+		<div class="wrap">
+			
+		<h1>수궁가</h1>
+	</div>
+	</section>
+	<section class="b">
+		<div class="wrap">
+			<p class="p1" id="bp1">수궁가는
+			 용왕이 병에 들자 약에 사용할 토끼의 간을 구하기 위해 자라가 지상으로 나와 토끼를 꾀어내는 낸다. 그러나 토끼가 꾀를 내어 용왕을 속이고 살아 돌아온다는 내용을 담고 있다.
+			<br><br>
+			</p>
+			<p class="p2" id="bp2">
+			『수궁가』말고도 『토끼타령』, 『별주부타령』, 『토별가』라고 부르기도 한다.
+		
+			수궁가에서 이름난 대복은 용왕탄식, 약성가, 토끼화상, 고고천변, 토끼와 자라, 토끼신세, 토끼기변, 가자가자, 백매주를 바삐 지나, 토끼욕설을 들 수 있다.</p>
+		</div>
+	</section>
+
+	<section class="c" id="cc">
+		<div class="wrap">
+			<h3 id="ch3">1.약성가</h3>
+			<p id="cp">약성가는 수궁가에서 도사가 용왕의 병을 진단 하고, 각종 약을 처방 할때 나오는 대목을 노래한 것이다.<br><br>
+				<약성가> 대목은 수궁가에서만이 아니라 <변강쇠가>, 봉산탈춤 등에도 나타난다.</p>
+			<h3 style="left: calc(50% - 670px); opacity: 1; top: 800px; font-size: 25px;">전통수궁가</h3>
+			<h3 style="left: calc(50% - 200px); opacity: 1; top: 800px; font-size: 25px;">퓨전수궁가_이날치</h3>
+			<h3 style="left: calc(50% + 270px); opacity: 1; top: 800px; font-size: 25px;">퓨전수궁가_이스턴모스트</h3>
+			<img class="cimg" src="./medi2.png">
+			<iframe  id="ccv1" class="cv1"width="460" height="260" src="https://www.youtube.com/embed/VtEms7RRrxA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			
+			
+			<iframe id="ccv3" class="cv3" width="460" height="260" src="https://www.youtube.com/embed/ws0zTF8YJvo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+			<iframe id="ccv2" class="cv2" width="460" height="260" src="https://www.youtube.com/embed/jbK68mHsLfg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+			
+		</div>
+	</section>
+	<section class="d" id="dd">
+		<div class="wrap">
+			<h3 id="dh">2.범이 내려온다</h3>
+			<p id="dp">별주부가 물밖으로 처음 나와 범을 토끼로 착각하여 범에게 생원이라며 범을 꾀어내려 하는 장면이다.</p>
+
+
+
+			<h3 style="opacity: 1; top: 800px;font-size: 25px;">전통_범내려오는 대목</h3>	
+			<h3 style="opacity: 1; top: 800px;font-size: 25px;
+			left: calc(50% + 50px);">퓨전_이날치</h3>	
+			<iframe class="dv2" class="ddv2" width="460" height="260" src="https://www.youtube.com/embed/xDYvybMCX8k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+			<iframe class="dv1" class="ddv1" width="460" height="260" src="https://www.youtube.com/embed/SmTRaSg2fTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			
+		</div>
+	</section>
+
+
+	<section class="e" id="ee">
+		<div class="wrap">
+			<img id="eeimg" class="eimg" src="./rabbit.png"> 
+			<h3 id="eh">3.좌우나졸</h3>
+			<p id="ep">좌우나졸은 토끼가 용궁에 도착하여 붙잡힌다. 토끼는 자신의 위험하다는 것을 깨닫고, 자신이 토끼가 아닌 다른 동물이라 하며 거짓말을 한다.</p>
+			<h3 style="opacity: 1; top: 690px;font-size: 25px;
+			left: calc(50% - 350px);">전통 좌우나졸</h3>
+			<h3 style="opacity: 1; top: 1000px;font-size: 25px;
+			left: calc(50% - 350px);">퓨전_이스턴모스트</h3>
+
+			<h3 style="opacity: 1; top: 1000px;font-size: 25px;
+			left: calc(50% + 50px);">퓨전_이스턴모스트</h3>
+			<h3 style="opacity: 1; top: 690px;font-size: 25px;
+			left: calc(50% + 50px);">전통 좌우나졸</h3>
+
+			<iframe class="ev1" class="eev1" width="360" height="210" src="https://www.youtube.com/embed/1gLV8G7SkQE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="ev2" class="eev2" width="360" height="210" src="https://www.youtube.com/embed/21L66rfN95A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="ev3" class="eev3" width="360" height="210" src="https://www.youtube.com/embed/6hrkXkGNQ34" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="ev4" class="eev4" width="360" height="210" src="https://www.youtube.com/embed/GTk_JqODtk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</section>
+
+	<section class="f" id="ff">
+		<div class="wrap"> 
+			<h3 id="fh">4.별주부가 울며 여짜오되</h3>
+			<p id="fp">토끼에게 속은 용왕이 토끼를 다시 물위로 보내려 하자, 별주부가 토끼에게 속지 말라며 배를 당장 갈라보자고 울며 애원한다.</p>
+
+			<h3 style="opacity: 1; top: 440px;font-size: 25px;
+			left: calc(50% - 550px);">전통_별주부가 울며 여짜오되</h3>
+			<h3 style="opacity: 1; top: 780px;font-size: 25px;
+			left: calc(50% - 550px);">퓨전_이날치</h3>
+
+			<iframe  class="fv1" class="ffv4" width="460" height="260" src="https://www.youtube.com/embed/5U3gX9Qk4yk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<iframe class="fv2" class="ffv2" width="460" height="260" src="https://www.youtube.com/embed/wiG2n4q1SUg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<img id="ffimg" class="fimg" src="./turtle.png">
+		</div>
+	</section>
+<footer><p>2019.12.19 김지희  한경대학교 디자인학과 디지털퍼블리싱2</p> </footer>
+
+	<script type="text/javascript">
+		
+		window.onscroll = function(){
+		var t = document.documentElement.scrollTop + document.body.scrollTop;
+		monitor.innerHTML = t.toFixed(1);
+
+		if ( t > 350) {bp1.style.animation = "ani 2s forwards";}
+		else{bp1.style.animation = "";}
+		if ( t > 350) {bp2.style.animation = "ani 2s forwards";}
+		else{bp2.style.animation = "";}
+
+		if ( t > 550) {ch3.style.animation = "ani2 1s forwards";}
+		else{ch3.style.animation = "";}
+		if ( t > 550) {cp.style.animation = "ani 2s forwards";}
+		else{cp.style.animation = "";}
+
+		if ( t > 1700) {dh.style.animation = "ani 1s forwards";}
+		else{dh.style.animation = "";}
+		if ( t > 1700) {dp.style.animation = "ani 2s forwards";}
+		else{dp.style.animation = "";}
+
+		if ( t > 2750) {eh.style.animation = "ani 2s forwards";}
+		else{eh.style.animation = "";}
+		if ( t > 2750) {ep.style.animation = "ani 2s forwards";}
+		else{ep.style.animation = "";}
+
+		if ( t > 4050) {fh.style.animation = "ani 2s forwards";}
+		else{fh.style.animation = "";}
+		if ( t > 4050) {fp.style.animation = "ani 2s forwards";}
+		else{fp.style.animation = "";}
+		
+
+		if ( t > 2700) {eeimg.style.animation = "rab1 3s forwards";}
+		else{eeimg.style.animation = "";}
+
+		if ( t > 3500) {ffimg.style.animation = "tur 3s forwards";}
+		else{ffimg.style.animation = "";}}
+		
+	</script>
+</body>
+</html>
